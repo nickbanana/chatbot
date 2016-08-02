@@ -20,7 +20,16 @@ public class KeywordContainer {
         Framecount = framecount;
     }
 
-    Keywords a;
+    public int getFrameLength()
+    {
+        return Semantic_Frame.size();
+    }
+
+    public KeywordContainer()
+    {
+        Semantic_Frame.clear();
+        Framecount=0;
+    }
 
 
 }

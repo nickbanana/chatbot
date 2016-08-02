@@ -12,4 +12,20 @@ public class Keywords {
         this.keyword=keyword;
         this.property=property;
     }
+
+    public String getKeyword() {
+        return keyword;
+    }
+
+    public String getProperty() {
+        return property;
+    }
+
+    public void setKeyword(String keyword) {
+        this.keyword = keyword;
+    }
+
+    public void setProperty(String property) {
+        this.property = property;
+    }
 }
