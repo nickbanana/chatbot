@@ -40,7 +40,7 @@ public class ChatView extends LinearLayout {
 
     private CardView inputBar, inputFrame;
     private ListView chatListView;
-    private EditText inputEditText;
+    //private EditText inputEditText;
 
     private FloatingActionButton sendButton;
     private boolean previousFocusState = false, sendButtonVisible, useEditorAction;
@@ -83,16 +83,16 @@ public class ChatView extends LinearLayout {
         chatListView.setAdapter(chatViewListAdapter);
 
 
-        setButtonOnClickListener();
-        setUserTypingListener();
-        setUserStoppedTypingListener();
+        //setButtonOnClickListener();
+        //setUserTypingListener();
+        //setUserStoppedTypingListener();
     }
 
     private void initializeViews() {
         chatListView = (ListView) findViewById(R.id.chat_list);
         inputBar = (CardView) findViewById(R.id.input_bar);
-        inputFrame = (CardView) findViewById(R.id.input_frame);
-        inputEditText = (EditText) findViewById(R.id.input_edit_text);
+        //inputFrame = (CardView) findViewById(R.id.input_frame);
+        //inputEditText = (EditText) findViewById(R.id.input_edit_text);
         sendButton = (FloatingActionButton) findViewById(R.id.sendButton);
     }
 
@@ -108,8 +108,8 @@ public class ChatView extends LinearLayout {
 
     private void setViewAttributes() {
         setInputBarAttributes();
-        setInputFrameAttributes();
-        setInputTextAttributes();
+        //setInputFrameAttributes();
+        //setInputTextAttributes();
         setSendButtonAttributes();
     }
 
@@ -131,10 +131,10 @@ public class ChatView extends LinearLayout {
         inputElevation = attributes.getDimension(R.styleable.ChatView_inputElevation, 0f);
     }
 
-    private void setInputFrameAttributes() {
-        inputFrame.setCardBackgroundColor(inputFrameBackgroundColor);
-        inputFrame.setCardElevation(inputElevation);
-    }
+   // private void setInputFrameAttributes() {
+   //     inputFrame.setCardBackgroundColor(inputFrameBackgroundColor);
+    //    inputFrame.setCardElevation(inputElevation);
+    //}
 
     private void getAttributesForInputText() {
         setInputTextDefaults();
@@ -149,11 +149,11 @@ public class ChatView extends LinearLayout {
         overrideTextStylesIfSetIndividually();
     }
 
-    private void setInputTextAttributes() {
-        inputEditText.setTextColor(inputTextColor);
-        inputEditText.setHintTextColor(inputHintColor);
-        inputEditText.setTextSize(TypedValue.COMPLEX_UNIT_PX, inputTextSize);
-    }
+    //private void setInputTextAttributes() {
+    //    inputEditText.setTextColor(inputTextColor);
+    //    inputEditText.setHintTextColor(inputHintColor);
+    //    inputEditText.setTextSize(TypedValue.COMPLEX_UNIT_PX, inputTextSize);
+    //}
 
     private void getAttributesForSendButton() {
         sendButtonVisible = attributes.getBoolean(R.styleable.ChatView_sendBtnVisible, true);
@@ -178,13 +178,13 @@ public class ChatView extends LinearLayout {
         useEditorAction = attributes.getBoolean(R.styleable.ChatView_inputUseEditorAction, false);
     }
 
-    private void setUseEditorAction() {
-        if (useEditorAction) {
-            setupEditorAction();
-        } else {
-            inputEditText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_MULTI_LINE | InputType.TYPE_TEXT_FLAG_AUTO_CORRECT | InputType.TYPE_TEXT_FLAG_CAP_SENTENCES);
-        }
-    }
+    //private void setUseEditorAction() {
+    //    if (useEditorAction) {
+    //        setupEditorAction();
+    //    } else {
+            //inputEditText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_MULTI_LINE | InputType.TYPE_TEXT_FLAG_AUTO_CORRECT | InputType.TYPE_TEXT_FLAG_CAP_SENTENCES);
+    //    }
+    //}
 
     private boolean hasStyleResourceSet() {
         return attributes.hasValue(R.styleable.ChatView_inputTextAppearance);
@@ -220,7 +220,7 @@ public class ChatView extends LinearLayout {
         inputHintColor = attributes.getColor(R.styleable.ChatView_inputHintColor, inputHintColor);
     }
 
-    private void setupEditorAction() {
+    /*private void setupEditorAction() {
         inputEditText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_AUTO_CORRECT | InputType.TYPE_TEXT_FLAG_CAP_SENTENCES);
         inputEditText.setImeOptions(EditorInfo.IME_ACTION_SEND);
         inputEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
@@ -238,9 +238,9 @@ public class ChatView extends LinearLayout {
                 return false;
             }
         });
-    }
+    }*/
 
-    private void setButtonOnClickListener() {
+    /*private void setButtonOnClickListener() {
         sendButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -252,9 +252,9 @@ public class ChatView extends LinearLayout {
 
             }
         });
-    }
+    }*/
 
-    private void setUserTypingListener() {
+   /* private void setUserTypingListener() {
         inputEditText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -284,7 +284,7 @@ public class ChatView extends LinearLayout {
                 previousFocusState = hasFocus;
             }
         });
-    }
+    }*/
 
 
     @Override
@@ -292,9 +292,9 @@ public class ChatView extends LinearLayout {
         return super.addViewInLayout(child, index, params);
     }
 
-    public String getTypedMessage() {
-        return inputEditText.getText().toString();
-    }
+    //public String getTypedMessage() {
+    //    return inputEditText.getText().toString();
+    //}
 
     public void setChatListener(ChatListener chatListener) {
         this.chatListener = chatListener;
@@ -304,7 +304,7 @@ public class ChatView extends LinearLayout {
         ChatMessage chatMessage = new ChatMessage(message, stamp, Type.SENT);
         if (chatListener != null && chatListener.sendMessage(message, stamp)) {
             chatViewListAdapter.addMessage(chatMessage);
-            inputEditText.setText("");
+            //inputEditText.setText("");
         }
     }
 
@@ -325,9 +325,9 @@ public class ChatView extends LinearLayout {
     }
 
 
-    public EditText getInputEditText() {
-        return inputEditText;
-    }
+    //public EditText getInputEditText() {
+    //    return inputEditText;
+    //}
 
     public FloatingActionButton getSendButton() {
         return sendButton;

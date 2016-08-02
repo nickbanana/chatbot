@@ -28,7 +28,7 @@ public class SeperateActivity extends AppCompatActivity {
     private String sendtxt;
     private String response;
     private ChatView chatView;
-    private ChatMessage chatMessage = new ChatMessage("",1,Type.SENT);
+    //private ChatMessage chatMessage = new ChatMessage("",1,Type.SENT);
 
 
     @Override
@@ -151,7 +151,6 @@ public class SeperateActivity extends AppCompatActivity {
             }
 
         }
-        chatMessage.setMessage(sendtxt);
-        chatView.newMessage(chatMessage);
+        chatView.sendMessage(sendtxt,System.currentTimeMillis());
     }
 }
