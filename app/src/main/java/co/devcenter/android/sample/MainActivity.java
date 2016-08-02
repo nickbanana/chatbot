@@ -11,13 +11,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        startActivity(new Intent(MainActivity.this, SeperateActivity.class));
 
-        View.OnClickListener listener = new View.OnClickListener() {
+        /*View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 switch (v.getId()) {
                     case R.id.seperate:
-                        startActivity(new Intent(MainActivity.this, SeperateActivity.class));
+
                         break;
 
                     case R.id.no_button:
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         };
 
         findViewById(R.id.seperate).setOnClickListener(listener);
-        findViewById(R.id.in_bar).setOnClickListener(listener);
-        findViewById(R.id.no_button).setOnClickListener(listener);
+        //findViewById(R.id.in_bar).setOnClickListener(listener);
+        //findViewById(R.id.no_button).setOnClickListener(listener);*/
     }
 }
