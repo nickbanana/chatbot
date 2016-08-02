@@ -116,12 +116,8 @@ public class SeperateActivity extends AppCompatActivity {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
 
-                            //response=AsyncSR(userNum,sendtxt);
-                            Log.v("SENDMIS_response->","my message:"+response);
-                            Toast.makeText(getApplicationContext(), response, Toast.LENGTH_LONG).show();
-                            //if(response.equals("Success")){
-                            //    ExitToMain();
-                            //}
+                            chatView.sendMessage(sendtxt,System.currentTimeMillis());
+
 
                         }
 
@@ -151,6 +147,6 @@ public class SeperateActivity extends AppCompatActivity {
             }
 
         }
-        chatView.sendMessage(sendtxt,System.currentTimeMillis());
+
     }
 }
