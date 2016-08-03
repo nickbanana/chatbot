@@ -31,5 +31,10 @@ public class KeywordContainer {
         Framecount=0;
     }
 
+    public boolean ContainerFilled()
+    {
+        return Semantic_Frame.size()==Framecount;
+    }
+
 
 }

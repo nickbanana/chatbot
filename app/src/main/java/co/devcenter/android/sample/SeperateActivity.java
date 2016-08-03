@@ -136,13 +136,14 @@ public class SeperateActivity extends AppCompatActivity {
                     b1.setCompoundDrawablesWithIntrinsicBounds(0,R.drawable.tick,0,0);
                     Button b2 = alertDialog.getButton(AlertDialog.BUTTON_NEGATIVE);
                     b2.setCompoundDrawablesWithIntrinsicBounds(0,R.drawable.cross2,0,0);
-                }else{
-                    Toast.makeText(getApplicationContext(), response, Toast.LENGTH_LONG).show();
+                }
+                //else{
+                    //Toast.makeText(getApplicationContext(), response, Toast.LENGTH_LONG).show();
                     //if(response.equals("Success")){
                     //    Log.v("RESPONSE","Success");
                         //ExitToMain();
                    // }
-                }
+                //}
                 break;
             }
 
