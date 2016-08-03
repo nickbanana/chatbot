@@ -27,7 +27,7 @@ public class SeperateActivity extends AppCompatActivity {
     private ArrayList<String> text;
     private String sendtxt;
     private ChatView chatView;
-    private Response response;
+    private Response response ;
     //private ChatMessage chatMessage = new ChatMessage("",1,Type.SENT);
 
 
@@ -115,6 +115,7 @@ public class SeperateActivity extends AppCompatActivity {
                     AlertDialog.Builder builder = new AlertDialog.Builder(this);
                     builder.setTitle("是這樣?");
                     builder.setMessage(sendtxt+"?");
+                    response = new Response();
 
                     builder.setPositiveButton(" ", new DialogInterface.OnClickListener() {
                         @Override
