@@ -115,13 +115,18 @@ public class SeperateActivity extends AppCompatActivity {
                     AlertDialog.Builder builder = new AlertDialog.Builder(this);
                     builder.setTitle("是這樣?");
                     builder.setMessage(sendtxt+"?");
-                    response = new Response();
-
+                    response = new Response(sendtxt);
+                    if(response==null)
+                    {
+                        Log.v("null","response is null");
+                    }
+                    Log.v("tag","test1");
                     builder.setPositiveButton(" ", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-
+                            Log.v("tag","test2");
                             chatView.sendMessage(sendtxt,System.currentTimeMillis());
+                            Log.v("tag","test3");
                             chatView.newMessage(response.Answer());
 
 
