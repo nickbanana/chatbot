@@ -26,8 +26,8 @@ public class SeperateActivity extends AppCompatActivity {
     private static final int RESULT_SPEECH = 1;
     private ArrayList<String> text;
     private String sendtxt;
-    private String response;
     private ChatView chatView;
+    private Response response;
     //private ChatMessage chatMessage = new ChatMessage("",1,Type.SENT);
 
 
@@ -80,6 +80,10 @@ public class SeperateActivity extends AppCompatActivity {
 
 
 
+
+
+
+
     private void start_speak(){
         Intent intent_speak = new Intent(
                 RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
@@ -117,6 +121,7 @@ public class SeperateActivity extends AppCompatActivity {
                         public void onClick(DialogInterface dialog, int which) {
 
                             chatView.sendMessage(sendtxt,System.currentTimeMillis());
+                            chatView.newMessage(response.Answer());
 
 
                         }
