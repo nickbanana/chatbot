@@ -6,7 +6,7 @@
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="co.devcenter.android.chatbot.SeperateActivity">
+    tools:context="co.devcenter.android.sample.SeperateActivity">
 
     <co.devcenter.android.ChatView
         android:id="@+id/chat_view"

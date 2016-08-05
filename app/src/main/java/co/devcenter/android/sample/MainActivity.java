@@ -1,4 +1,4 @@
-package co.devcenter.android.chatbot;
+package co.devcenter.android.sample;
 
 import android.content.Intent;
 import android.os.Bundle;
