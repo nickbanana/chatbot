@@ -1,6 +1,4 @@
-package co.devcenter.android.sample;
-
-import android.util.Log;
+package co.devcenter.android.chatbot;
 
 /**
  * Created by chococsie on 2016/8/3.
@@ -23,7 +21,7 @@ public class Response {
         {
             Ans = "哪一家";
         }
-        else if(Question.equals("五十嵐"))
+        else if(Question.equals("五十嵐")||Question.equals("50嵐"))
         {
             Ans = "哪一種飲料";
         }

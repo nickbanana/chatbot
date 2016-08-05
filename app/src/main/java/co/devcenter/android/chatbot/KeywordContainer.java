@@ -1,4 +1,4 @@
-package co.devcenter.android.sample;
+package co.devcenter.android.chatbot;
 
 import java.util.ArrayList;
 

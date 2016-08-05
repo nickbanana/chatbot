@@ -1,4 +1,4 @@
-package co.devcenter.android.sample;
+package co.devcenter.android.chatbot;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="co.devcenter.android.sample">
+    package="co.devcenter.android.chatbot">
 
     <application
         android:allowBackup="true"
@@ -10,7 +10,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".MainActivity"
+            android:name="co.devcenter.android.chatbot.MainActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,20 +18,20 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".SeperateActivity"
-            android:parentActivityName=".MainActivity"
+        <activity android:name="co.devcenter.android.chatbot.SeperateActivity"
+            android:parentActivityName="co.devcenter.android.chatbot.MainActivity"
             android:label="Seperate">
 
         </activity>
 
-        <activity android:name=".NoButtonActivity"
-            android:parentActivityName=".MainActivity"
+        <activity android:name="co.devcenter.android.chatbot.NoButtonActivity"
+            android:parentActivityName="co.devcenter.android.chatbot.MainActivity"
             android:label="No Button">
 
         </activity>
 
-        <activity android:name=".InBarActivity"
-            android:parentActivityName=".MainActivity"
+        <activity android:name="co.devcenter.android.chatbot.InBarActivity"
+            android:parentActivityName="co.devcenter.android.chatbot.MainActivity"
             android:label="Inside Bar">
 
         </activity>

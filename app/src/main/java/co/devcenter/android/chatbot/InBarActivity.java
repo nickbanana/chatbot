@@ -1,4 +1,4 @@
-package co.devcenter.android.sample;
+package co.devcenter.android.chatbot;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

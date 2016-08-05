@@ -1,10 +1,9 @@
-package co.devcenter.android.sample;
+package co.devcenter.android.chatbot;
 
 import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.speech.tts.TextToSpeech;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,8 +16,6 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 import co.devcenter.android.ChatView;
-import co.devcenter.android.models.ChatMessage;
-import co.devcenter.android.models.ChatMessage.Type;
 
 
 public class SeperateActivity extends AppCompatActivity {
